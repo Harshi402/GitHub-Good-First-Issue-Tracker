@@ -1,6 +1,8 @@
 # GitHub-Good-First-Issue-Tracker
 # Technologies Used: Python, API Integration, Version Control: Git, Web Framework: Streamlit, Database: MongoDB.
 
+https://github.com/user-attachments/assets/f0694546-1db3-4647-901b-fee75f3119e7
+
 # How to view the website:
 1. Clone the repository
 2. Open it in preferably replit and then in the shell run command "streamlit run streamlit_app.py"
