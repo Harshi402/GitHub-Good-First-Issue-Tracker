@@ -1,5 +1,10 @@
 # GitHub-Good-First-Issue-Tracker
 # Technologies Used: Python, API Integration, Version Control: Git, Web Framework: Streamlit, Database: MongoDB.
+
+# How to view the website:
+1. Clone the repository
+2. Open it in preferably replit and then in the shell run command "streamlit run streamlit_app.py"
+   
 Intention to create: Facilitate beginner-friendly open-source contributions through a streamlined Streamlit web application providing easy navigation and visualization, promoting community engagement and skill development in software development.
 Utilized the GitHubAPI to fetch issues labeled as ”good-first-issue” with Python requests. Stored the processed data in MongoDB for efficient querying and retrieval.
 
