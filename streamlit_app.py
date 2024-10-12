@@ -10,21 +10,6 @@ st.set_page_config(
     initial_sidebar_state="expanded",
 )
 
-st.markdown("""
-    <style>
-        .top-bar {
-            background-color: #1f77b4;  /* Change the color as needed */
-            color: white;
-            padding: 10px;
-            text-align: center;
-            font-size: 24px;
-        }
-    </style>
-    <div class="top-bar">
-        GitHub Good-First-Issue Tracker
-    </div>
-""", unsafe_allow_html=True)
-
 # load mongodb password from secrets
 mongo_password = os.environ['MONGO_PASSWORD']
 
