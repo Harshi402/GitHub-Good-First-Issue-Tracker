@@ -50,21 +50,21 @@ def display_data(record):
   label_url = record["label_url"]
   col1, col2 = st.columns([3, 1])
     
-    with col1:
-        st.markdown(f"### [{issue_title}]({issue_url})")
-        st.markdown(f"**Repository:** [{repo_name}](https://github.com/{repo_name})")
+  with col1:
+      st.markdown(f"### [{issue_title}]({issue_url})")
+      st.markdown(f"**Repository:** [{repo_name}](https://github.com/{repo_name})")
         
         # Display label and link
-        st.markdown(f"**Label:** [{label_name}]({label_url})")
+      st.markdown(f"**Label:** [{label_name}]({label_url})")
 
-    with col2:
-        state_indicator = "🟢 Open" if record["state"] == "open" else "🔴 Closed"
-        locked_indicator = "🔒 Locked" if record["locked"] else "🔓 Unlocked"
+  with col2:
+      state_indicator = "🟢 Open" if record["state"] == "open" else "🔴 Closed"
+      locked_indicator = "🔒 Locked" if record["locked"] else "🔓 Unlocked"
         
-        st.write(f"**Status:** {state_indicator}")
-        st.write(f"**Locked:** {locked_indicator}")
+      st.write(f"**Status:** {state_indicator}")
+      st.write(f"**Locked:** {locked_indicator}")
         
-    st.markdown("---")
+  st.markdown("---")
 
 
   # st.markdown(f"## {issue_title}")
