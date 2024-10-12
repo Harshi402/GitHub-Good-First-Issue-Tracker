@@ -66,8 +66,8 @@ def display_data(record):
 # Streamlit App
 def main():
   total_records = collection.count_documents({})
-  # st.sidebar.title("Navigation")
-  # st.sidebar.radio("Go to", ["Issues", "Repos"])
+  st.sidebar.title("Navigation")
+  st.sidebar.radio("Go to", ["Issues", "Repos"])
 
   st.title("_GitHub_ :blue[_Good-First-Issues_]")
   #pagination settings
