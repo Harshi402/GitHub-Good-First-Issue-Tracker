@@ -49,14 +49,14 @@ def display_data(record):
   label_name = record["label_name"]
   label_url = record["label_url"]
 
-  st.markdown(f"## {issue_title}")
+  st.markdown(f"### 🔹 {issue_title}")
   st.link_button(repo_name, f"https://github.com/{repo_name}", type="primary")
   st.markdown(f"**Issue Url** : {issue_url}")
 
   st.link_button(label_name, label_url)
 
   state_indicator = "🟢" if record["state"] == "open" else "🔴"
-  locked_indicator = "True" if record["locked"] else "False"
+  locked_indicator = "🔒 Locked" if record["locked"] else "🔓 Unlocked"
 
   st.write(f"**Status:** {state_indicator} | **Locked:** {locked_indicator}")
 
@@ -66,7 +66,7 @@ def display_data(record):
 # Streamlit App
 def main():
   total_records = collection.count_documents({})
-  st.title("_GitHub_ :blue[_Good-First-Issues_] GHW")
+  st.title("_GitHub_ :blue[_Good-First-Issues_]")
   #pagination settings
   page_size = 20
   mx = int(total_records/page_size)
