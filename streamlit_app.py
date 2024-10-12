@@ -49,7 +49,7 @@ def display_data(record):
   label_name = record["label_name"]
   label_url = record["label_url"]
 
-  st.markdown(f"##{issue_title}")
+  st.markdown(f"## {issue_title}")
   st.link_button(repo_name, f"https://github.com/{repo_name}", type="primary")
   st.markdown(f"**Issue Url** : {issue_url}")
 
@@ -66,8 +66,8 @@ def display_data(record):
 # Streamlit App
 def main():
   total_records = collection.count_documents({})
-  st.sidebar.title("Navigation")
-  st.sidebar.radio("Go to", ["Issues", "Repos"])
+  # st.sidebar.title("Navigation")
+  # st.sidebar.radio("Go to", ["Issues", "Repos"])
 
   st.title("_GitHub_ :blue[_Good-First-Issues_]")
   #pagination settings
