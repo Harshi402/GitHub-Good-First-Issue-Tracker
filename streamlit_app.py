@@ -48,37 +48,19 @@ def display_data(record):
   issue_url = record["issue_url"]
   label_name = record["label_name"]
   label_url = record["label_url"]
-  col1, col2 = st.columns([3, 1])
-    
-  with col1:
-      st.markdown(f"### [{issue_title}]({issue_url})")
-      st.markdown(f"**Repository:** [{repo_name}](https://github.com/{repo_name})")
-        
-        # Display label and link
-      st.markdown(f"**Label:** [{label_name}]({label_url})")
 
-  with col2:
-      state_indicator = "🟢 Open" if record["state"] == "open" else "🔴 Closed"
-      locked_indicator = "🔒 Locked" if record["locked"] else "🔓 Unlocked"
-        
-      st.write(f"**Status:** {state_indicator}")
-      st.write(f"**Locked:** {locked_indicator}")
-        
+  st.markdown(f"## {issue_title}")
+  st.link_button(repo_name, f"https://github.com/{repo_name}", type="primary")
+  st.markdown(f"**Issue Url** : {issue_url}")
+
+  st.link_button(label_name, label_url)
+
+  state_indicator = "🟢" if record["state"] == "open" else "🔴"
+  locked_indicator = "True" if record["locked"] else "False"
+
+  st.write(f"**Status:** {state_indicator} | **Locked:** {locked_indicator}")
+
   st.markdown("---")
-
-
-  # st.markdown(f"## {issue_title}")
-  # st.link_button(repo_name, f"https://github.com/{repo_name}", type="primary")
-  # st.markdown(f"**Issue Url** : {issue_url}")
-
-  # st.link_button(label_name, label_url)
-
-  # state_indicator = "🟢" if record["state"] == "open" else "🔴"
-  # locked_indicator = "True" if record["locked"] else "False"
-
-  # st.write(f"**Status:** {state_indicator} | **Locked:** {locked_indicator}")
-
-  # st.markdown("---")
 
 
 # Streamlit App
