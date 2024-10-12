@@ -67,7 +67,7 @@ def display_data(record):
 def main():
   total_records = collection.count_documents({})
   st.sidebar.title("Navigation")
-  st.sidebar.radio("Go to", ["Home", "Data", "About"])
+  st.sidebar.radio("Go to", ["Issues", "Repos"])
 
   st.title("_GitHub_ :blue[_Good-First-Issues_]")
   #pagination settings
