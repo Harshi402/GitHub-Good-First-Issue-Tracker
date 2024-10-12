@@ -56,7 +56,7 @@ def display_data(record):
   st.link_button(label_name, label_url)
 
   state_indicator = "🟢" if record["state"] == "open" else "🔴"
-  locked_indicator = "🔒 Locked" if record["locked"] else "🔓 Unlocked"
+  locked_indicator = "True" if record["locked"] else "False"
 
   st.write(f"**Status:** {state_indicator} | **Locked:** {locked_indicator}")
 
