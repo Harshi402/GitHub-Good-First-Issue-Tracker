@@ -73,7 +73,7 @@ def main():
   #pagination settings
   page_size = 20
   mx = int(total_records/page_size)
-  page_number = st.sidebar.number_input("Page Number", min_value=1,value=1,max_value=mx)
+  page_number = st.sidebar.number_input("** Page Number **", min_value=1,value=1,max_value=mx)
   #loader while fetching data
   
   st.sidebar.write(f"Total Records: {total_records}")
