@@ -10,12 +10,6 @@ st.set_page_config(
     initial_sidebar_state="expanded",
 )
 
-if 'first_load' not in st.session_state:
-    st.session_state.first_load = True
-
-if st.session_state.first_load:
-    st.session_state.first_load = False 
-    
 # load mongodb password from secrets
 mongo_password = os.environ['MONGO_PASSWORD']
 
