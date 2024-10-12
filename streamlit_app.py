@@ -10,6 +10,12 @@ st.set_page_config(
     initial_sidebar_state="expanded",
 )
 
+if 'first_load' not in st.session_state:
+    st.session_state.first_load = True
+
+if st.session_state.first_load:
+    st.session_state.first_load = False 
+    
 # load mongodb password from secrets
 mongo_password = os.environ['MONGO_PASSWORD']
 
@@ -65,10 +71,6 @@ def display_data(record):
 
 # Streamlit App
 def main():
-  if st.button("Scroll to Top"):
-    st.session_state.scroll_top = True
-    st.experimental_rerun()
-    
   total_records = collection.count_documents({})
   st.sidebar.title("Navigation")
   st.sidebar.radio("Go to", ["Issues", "Repos"])
