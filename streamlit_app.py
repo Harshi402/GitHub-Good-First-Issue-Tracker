@@ -66,9 +66,6 @@ def display_data(record):
 # Streamlit App
 def main():
   total_records = collection.count_documents({})
-  st.sidebar.title("GitHub Issues")
-  st.sidebar.markdown("Browse beginner-friendly GitHub issues!")
-  st.sidebar.write(f"**Total Issues Available:** {total_records}")
   
   st.title("_GitHub_ :blue[_Good-First-Issues_]")
   #pagination settings
